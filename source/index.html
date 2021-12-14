@@ -6,15 +6,52 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Велосипеды</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="/fonts/opensans.woff2" as="font">
+  <!-- <link rel="preload" href="./fonts/opensans.woff2" as="font"> -->
 </head>
 <body class="page__body">
-  <h1>hello</h1>
-  <header class="page-header">
+
+  <header class="page-header page-header--nojs ">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo">
+        <img src="img/logo.svg" width="68" height="20" alt="Магазин велосипедов Moon">
+      </a>
+      <nav class="main-nav main-nav--nojs">
+        <button class="page-header__toggle toggle-navigation toggle-navigation--open" type="button" aria-label="Открыть меню">
+          <span class="toggle-navigation__icon"></span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="#" class="main-nav__link">О нас</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Виды велосипедов</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Видео про велосипеды</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="page-header__bottom">
+        <div class="page-header__philosophy">
+          <h1 class="page-header__heading">Мы продаем велосипеды</h1>
+          <p class="page-header__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+        </div>
+        <div class="page-header__form form-container">
+          <p class="form-container__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+          <form class="form" method="post" action="#">
+            <div class="form__field">
+              <input class="form__input phone__input--name" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя" required maxlength="100">
+              <label class="form__label visually-hidden" for="user-name">Ваше имя</label>
+            </div>
+            <div class="form__field">
+              <input class="form__input form__input--phone" type="tel" name="user-phone" id="user-phone" maxlength="15" placeholder="Введите ваш номер телефона" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
+              <label class="form__label visually-hidden" for="user-phone">Ваш номер телефона</label>
+            </div>
+          </form>
+          <button class="form__add button" type="submit">Подобрать велосипед мечты</button>
+        </div>
+      </div>
+    </div>
   </header>
   <main class="page-main">
   </main>
   <footer class="page-footer">
   </footer>
+  <script src="./js/script.js"></script>
 </body>
 </html>

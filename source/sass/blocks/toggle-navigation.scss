@@ -1,0 +1,70 @@
+.toggle-navigation {
+  position: relative;
+  @include button-reset;
+  @include gamburger-parametrs(50px, 50px, $color-turquoise);
+  display: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media(max-width: $tablet) {
+    display: block;
+  }
+};
+
+.toggle-navigation__icon {
+  position: absolute;
+  z-index: 2;
+  top: 24px;
+  left: 10px;
+  @include gamburger-parametrs(30px, 2px, black);
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    @include gamburger-parametrs(30px, 2px, black);
+    content: "";
+    display: block;
+    border: none;
+  }
+};
+
+.toggle-navigation--open {
+  & .toggle-navigation__icon::before {
+    transform: translate(0, -6px);
+  }
+
+  & .toggle-navigation__icon::after {
+    transform: translate(0, 4px);
+  }
+}
+
+.toggle-navigation--close {
+  background-color: transparent;
+  & .toggle-navigation__icon {
+    transform: rotate(45deg);
+    background-color: rgba(20, 21, 23, 0.2)
+
+  }
+
+  & .toggle-navigation__icon::before {
+    transform: rotate(90deg);
+    background-color: rgba(20, 21, 23, 0.2);
+  }
+
+  & .toggle-navigation__icon::after {
+    display: none;
+  }
+};
+
+.toggle-navigation--nojs {
+  display: none;
+};
+
+.toggle-navigation--close + .main-nav__list {
+  @media(max-width: $tablet) {
+    display: block;
+  }
+};
