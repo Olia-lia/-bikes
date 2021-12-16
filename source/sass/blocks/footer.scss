@@ -1,0 +1,15 @@
+.page-footer {
+  width: 100%;
+
+  &__wrapper {
+    margin: 0 auto;
+    @media(max-width: $tablet) {
+      padding: 0 35px;
+    }
+
+    @media(max-width: $mobile) {
+      padding: 0 35px;
+    }
+
+  }
+}

@@ -4,7 +4,9 @@ var headerToggle = document.querySelector('.page-header__toggle');
 var mainNav = document.querySelector('.main-nav');
 
 var form = document.querySelector('.form');
-var phoneInput = form.querySelector('.form__input--phone');
+var phoneInput = document.getElementById('user-phone');
+var nameInput = document.getElementById('user-name');
+var formButton = document.querySelector('.form__add');
 
 pageHeader.classList.remove('page-header--nojs');
 pageHeader.classList.add('page-header--closed-menu');
@@ -24,10 +26,30 @@ headerToggle.addEventListener('click', function () {
   }
 });
 
+const checkNameInputValidity = () => {
+  const valueLength = nameInput.value.length;
+  valueLength < 1  ?
+    nameInput.setCustomValidity('Поле не может быть пустым'):
+    nameInput.setCustomValidity('');
+  nameInput.reportValidity();
+};
+
 const checkPhoneInputValidity = () => {
-  const valuePhoneInput = phoneInput.value;
-console.log(valuePhoneInput)
+  const value = phoneInput.value;
+  const valueArray = [];
+  for (let i = 0; i < value.length; i++) {
+    valueArray[i] = Number(value[i]);
+    isNaN(valueArray[i]) ? phoneInput.setCustomValidity('Необходимо вводить только числовые значения') :
+    phoneInput.setCustomValidity('')
+  }
+  phoneInput.reportValidity();
+};
+
+//phoneInput.value = valueArray.replace('^\+\d{1}\(\d{3}\)\d{3}-\d{4}$');
+
+const addFormHandlers = () => {
+  checkNameInputValidity();
+  checkPhoneInputValidity(); 
 }
 
-
-checkPhoneInputValidity();
+document.querySelector('.form__add').addEventListener('click', addFormHandlers);
