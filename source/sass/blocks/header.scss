@@ -13,7 +13,7 @@
   @media(max-width: $tablet) {
 
     & .page-header__bottom {
-      @include bg-retinization(url("../img/background-tablet1x.jpg"), ("../img/background-tablet2x.jpg"), -122px, 100%, auto)
+      @include bg-retinization(url("../img/background-tablet1x.jpg"), ("../img/background-tablet2x.jpg"), -100px, 100%, auto)
     }
 
     & .page-header__logo {
@@ -21,21 +21,17 @@
     }
   }
 
-  @media(max-width: $mobile) {
+  @media(max-width: 720px) {
 
-    & .page-header__bottom {
-      @include bg-retinization(url("../img/background-mobile1x.jpg"), ("../img/background-mobile2x.jpg"), 0, 100%, 100%)
-    }
+    // & .page-header__bottom .page-header__philosophy{
+    //   @include bg-retinization(url("../img/background-mobile1x.jpg"), ("../img/background-mobile2x.jpg"), 0, 767px, 390px)
+    // }
   }
 }
 
 .page-header--closed-menu {
   @media(max-width: $tablet) {
     @include bg-retinization(url("../img/background-tablet1x.jpg"), ("../img/background-tablet2x.jpg"), 0, 100vw, auto);
-
-    @media(max-width: $mobile) {
-      @include bg-retinization(url("../img/background-mobile1x.jpg"), ("../img/background-mobile2x.jpg"), 0, 100vw, auto);
-    }
 
     & .main-nav__list {
       display: none;
@@ -44,6 +40,10 @@
     & .page-header__toggle {
       display: block;
     }
+  }
+
+  @media(max-width: 615px) {
+    @include bg-retinization(url("../img/background-mobile1x.jpg"), ("../img/backgroundmobile2x.jpg"), 0, 767, 390px);
   }
 };
 
@@ -102,10 +102,6 @@
   }
 
   @media(max-width: $mobile) {
-    margin-bottom: 70px;
-  }
-
-  @media(max-width: 358px) {
     margin-bottom: 148px;
   }
 }
@@ -136,9 +132,9 @@
     @include text-size(18px, 32px, 300);
   }
 
-  @media (max-width: $mobile) {
-    width: 90%;
-  }
+  // @media (max-width: $mobile) {
+  //   width: 90%;
+  // }
 }
 
 .page-header__logo {

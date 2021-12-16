@@ -10,8 +10,7 @@
     margin-bottom: 63px;
   }
 
-  @media(max-width: $mobile) {
-    padding: 0;
+  @media(max-width: 600px) {
     margin-bottom: 50px;
   }
 }
@@ -84,7 +83,7 @@
     color: $color-graphite;
 
     &:hover {
-      background-color: pink;
+      background-color: $color-turquoise;
     }
   }
 }

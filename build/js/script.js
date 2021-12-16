@@ -48,8 +48,8 @@ const checkPhoneInputValidity = () => {
 //phoneInput.value = valueArray.replace('^\+\d{1}\(\d{3}\)\d{3}-\d{4}$');
 
 const addFormHandlers = () => {
-  checkNameInputValidity();
-  checkPhoneInputValidity(); 
+  checkNameInputValidity()
+  checkPhoneInputValidity()
 }
 
 document.querySelector('.form__add').addEventListener('click', addFormHandlers);
