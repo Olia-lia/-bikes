@@ -4,45 +4,58 @@
   border: none;
   cursor: pointer;
   outline: none;
-}
+};
 
 @mixin backlight($color: color) {
   outline: 5px solid $color;
   outline-offset: -5px;
-}
+};
 
 @mixin desktop-width {
   max-width: 1024px;
   margin: 0 auto;
   height: auto;
-}
+};
 
 @mixin text-size ($font-size, $line-height, $font-weight) {
   font-size: $font-size;
   line-height: $line-height;
   font-weight: $font-weight;
-}
+};
 
-@mixin bg-retinization ($background-image, $background-image-retina, $background-position, $width, $height ) {
+@mixin background-color ($px) {
+  background: linear-gradient(to bottom, black 0px, pink $px);
+};
+
+@mixin bg-retinization ($background-image, $background-image-retina, $background-position) {
   background-image: $background-image;
   background-repeat: no-repeat;
   background-position: center $background-position;
-  background-size: $width, $height;
+  //background-size: $width, $height;
 
   @media (min-resolution: 2dppx) {
     background-image: $background-image-retina;
   }
-}
+};
 
 @mixin pseudo($width, $height, $left, $bottom) {
   content: "";
   height: $height;
   width: $width;
-  content:"";
   position: absolute;
   bottom: $bottom;
   left: $left;
-}
+};
+
+@mixin pseudo-element-types($width, $px) {
+  content: "";
+  height: $width;
+  width: $width;
+  position: absolute;
+  outline: $px solid $color-turquoise;
+  outline-offset: -$px;
+  background-color: transparent;
+};
 
 @mixin gamburger-parametrs ($width, $height, $background-color) {
   height: $height;

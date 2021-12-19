@@ -1,5 +1,10 @@
 .form-container {
-  width: 327px;
+  box-sizing: border-box;
+  max-width: 327px;
+
+  @media(max-width: $mobile) {
+    padding: 0 10px;
+  }
 };
 
 .form-container__text {
@@ -10,7 +15,7 @@
     margin-bottom: 30px;
   }
 
-  @media(max-width: 930px) {
+  @media(max-width: $tablet) {
     color: black;
   }
 
