@@ -1,4 +1,5 @@
 .types {
+  @include backlight(red);
   width: 100%;
   background-color: $color-back-grey;
 };
@@ -18,7 +19,7 @@
   }
 
   @media(max-width: $mobile) {
-    padding: 50px 21px;
+    padding: 50px 21px 10px 20px;
   }
 };
 
@@ -131,17 +132,17 @@
     &:nth-child(3n-2) {
       margin-left: 50px;
       &:after {
-        top: 192px;
-        left: -50px;
-        width: 140px;
-        height: 140px;
+        top: 190px;
+        left: -49px;
+        width: 150px;
+        height: 150px;
         outline-width: 15px;
       }
     }
 
     &:nth-child(3n) {
       &:before {
-        @include pseudo-element-types(70px, 15px);
+        @include pseudo-element-types(66px, 15px);
         top: -20px;
         right: -25px;
       }
@@ -165,7 +166,6 @@
   width: 100%;
   text-decoration: none;
   color: black;
-  //display: inline-block;
   height: auto;
 
   &:hover h3 {
@@ -199,7 +199,7 @@
   }
 
   @media (max-width: $tablet) {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     & img {
      object-position: center bottom;
      height: 300px;

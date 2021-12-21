@@ -119,30 +119,32 @@
     </section>
     <section class="video">
       <div class="video__wrapper">
-        <div class="video__description">
-          <h2 class="section-class">Видео про велосипеды</h2>
-          <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <div class="video__wrapper-inner">
+          <div class="video__description">
+            <h2 class="section-heading">Видео про велосипеды</h2>
+            <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+          </div>
         </div>
       </div>
-
       <div class="video__content">
-        <picture>
-          <source media="(max-width: 766px)" srcset="img/video-mobile1x.webp 1x, img/video-mobile2x.webp 2x" type="image/webp">
-          <source media="(max-width: 1023px)" srcset="img/video-tablet1x.webp 1x, img/video-tablet2x.jpg 2x"  type="image/webp">
-          <source media="(min-width: 1024px)" srcset="img/video-desktop1x.webp 1x, img/video-desktop2x 2x" type="image/webp">
-          <img
-            src="img/video-desktop1x.png"
-            srcset="img/video-desktop2x.png"
-            width="929" height="522"
-            alt="обложка видео">
-        </picture>
-        <a class="video__content-link" href="" aria-label="Включить видео">
-          <svg class="video__content-icon play-icon" width="65" height="65" role="img" focusable="true">
-            <use xlink:href="./img/sprite_auto.svg#icon-play"></use>
-          </svg>
-        </a>
+        <div class="video__content-inner">
+          <!-- <picture>
+            <source media="(max-width: 766px)" srcset="img/video-mobile1x.webp 1x, img/video-mobile2x.webp 2x" type="image/webp">
+            <source media="(max-width: 1023px)" srcset="img/video-tablet1x.webp 1x, img/video-tablet2x.webp 2x"  type="image/webp">
+            <source media="(min-width: 1024px)" srcset="img/video-desktop1x.webp 1x, img/video-desktop2x.webp 2x" type="image/webp"> -->
+            <img
+              src="img/video-desktop1x.png"
+              srcset="img/video-desktop2x.png 2x"
+              width="929" height="522"
+              alt="обложка видео">
+          <!-- </picture> -->
+          <a class="video__content-link" href="#" aria-label="Включить видео">
+            <svg class="video__content-icon play-icon" width="65" height="65" role="img" focusable="true">
+              <use xlink:href="./img/sprite_auto.svg#icon-play"></use>
+            </svg>
+          </a>
+        </div>
       </div>
-
     </section>
   </main>
   <footer class="page-footer">

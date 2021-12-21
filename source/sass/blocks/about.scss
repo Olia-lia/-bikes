@@ -1,13 +1,13 @@
 .about {
   width: 100%;
   height: auto;
+  margin-bottom: 70px;
 };
 
 .about__container {
-  @include desktop-width;
+  max-width: 1440px;
   box-sizing: border-box;
   padding: 0 30px;
-  //margin-bottom: 60px;
 
   @media(max-width: $tablet) {
   }
